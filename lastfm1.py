@@ -18,7 +18,8 @@ def api_get_request(url):
     # only works if you limit to one row returned...print "keys for artist are: " + str(data["topartists"]["artist"].keys())
 
     #print "first artist name is: " + str(data["topartists"]["artist"][0]["name"])
-    
+    #test line, one more change,
+    # last test change
     topartist = data["topartists"]["artist"][0]["name"]
 
     #print data["topartists"]["@attr"]
