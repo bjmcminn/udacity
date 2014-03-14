@@ -1,0 +1,770 @@
+---SUMMARY OF COLUMNS---
+
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 30 entries, 0 to 29
+Data columns:
+date                                  30  non-null values
+maxpressurem                          30  non-null values
+maxdewptm                             30  non-null values
+maxpressurei                          30  non-null values
+maxdewpti                             30  non-null values
+since1julheatingdegreedaysnormal      30  non-null values
+heatingdegreedaysnormal               30  non-null values
+since1sepcoolingdegreedaysnormal      0  non-null values
+hail                                  30  non-null values
+since1julsnowfallm                    30  non-null values
+since1julheatingdegreedays            30  non-null values
+maxvisi                               30  non-null values
+since1sepheatingdegreedaysnormal      0  non-null values
+heatingdegreedays                     30  non-null values
+mindewptm                             30  non-null values
+since1sepheatingdegreedays            0  non-null values
+maxwspdm                              30  non-null values
+since1julsnowfalli                    30  non-null values
+since1sepcoolingdegreedays            0  non-null values
+snow                                  30  non-null values
+meanvism                              30  non-null values
+meandewptm                            30  non-null values
+snowdepthm                            29  non-null values
+meanvisi                              30  non-null values
+fog                                   30  non-null values
+snowdepthi                            29  non-null values
+minvism                               30  non-null values
+since1jancoolingdegreedays            30  non-null values
+minvisi                               30  non-null values
+coolingdegreedaysnormal               30  non-null values
+gdegreedays                           30  non-null values
+maxwspdi                              30  non-null values
+meanwindspdi                          30  non-null values
+meanpressurei                         30  non-null values
+monthtodateheatingdegreedaysnormal    30  non-null values
+meanwindspdm                          30  non-null values
+meanpressurem                         30  non-null values
+tornado                               30  non-null values
+mindewpti                             30  non-null values
+mintempi                              30  non-null values
+meandewpti                            30  non-null values
+rain                                  30  non-null values
+mintempm                              30  non-null values
+minhumidity                           30  non-null values
+precipsource                          0  non-null values
+minwspdi                              30  non-null values
+meanwdird                             30  non-null values
+meanwdire                             0  non-null values
+minwspdm                              30  non-null values
+monthtodatesnowfalli                  30  non-null values
+monthtodatecoolingdegreedaysnormal    30  non-null values
+monthtodatesnowfallm                  30  non-null values
+maxhumidity                           30  non-null values
+coolingdegreedays                     30  non-null values
+maxtempm                              30  non-null values
+minpressurei                          30  non-null values
+monthtodatecoolingdegreedays          30  non-null values
+maxtempi                              30  non-null values
+minpressurem                          30  non-null values
+humidity                              0  non-null values
+precipi                               30  non-null values
+snowfalli                             30  non-null values
+since1jancoolingdegreedaysnormal      30  non-null values
+precipm                               30  non-null values
+snowfallm                             30  non-null values
+thunder                               30  non-null values
+monthtodateheatingdegreedays          30  non-null values
+meantempi                             30  non-null values
+maxvism                               30  non-null values
+meantempm                             30  non-null values
+dtypes: float64(20), int64(49), object(1)
+
+
+---SUMMARY STATISTICS BY COLUMN---
+
+maxpressurem
+count      30.000000
+mean     1016.733333
+std         4.425111
+min      1007.000000
+25%      1014.250000
+50%      1017.000000
+75%      1019.000000
+max      1026.000000
+Name: maxpressurem
+maxdewptm
+count    30.000000
+mean     14.066667
+std       4.940566
+min       4.000000
+25%      10.000000
+50%      14.500000
+75%      17.750000
+max      21.000000
+Name: maxdewptm
+maxpressurei
+count    30.000000
+mean     30.031333
+std       0.127840
+min      29.740000
+25%      29.965000
+50%      30.030000
+75%      30.097500
+max      30.310000
+Name: maxpressurei
+maxdewpti
+count    30.000000
+mean     57.266667
+std       8.920852
+min      39.000000
+25%      50.000000
+50%      58.000000
+75%      63.750000
+max      70.000000
+Name: maxdewpti
+since1julheatingdegreedaysnormal
+count      30.000000
+mean     4717.700000
+std        35.338901
+min      4646.000000
+25%      4692.250000
+50%      4725.000000
+75%      4748.250000
+max      4763.000000
+Name: since1julheatingdegreedaysnormal
+heatingdegreedaysnormal
+count    30.000000
+mean      4.166667
+std       1.821014
+min       2.000000
+25%       3.000000
+50%       4.000000
+75%       5.750000
+max       8.000000
+Name: heatingdegreedaysnormal
+since1sepcoolingdegreedaysnormal
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: since1sepcoolingdegreedaysnormal
+hail
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: hail
+since1julsnowfallm
+count     30.00
+mean     157.23
+std        0.00
+min      157.23
+25%      157.23
+50%      157.23
+75%      157.23
+max      157.23
+Name: since1julsnowfallm
+since1julheatingdegreedays
+count      30.000000
+mean     4691.100000
+std        28.807746
+min      4635.000000
+25%      4669.500000
+50%      4690.500000
+75%      4723.000000
+max      4724.000000
+Name: since1julheatingdegreedays
+maxvisi
+count    30.000000
+mean      9.833333
+std       0.746640
+min       6.000000
+25%      10.000000
+50%      10.000000
+75%      10.000000
+max      10.000000
+Name: maxvisi
+since1sepheatingdegreedaysnormal
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: since1sepheatingdegreedaysnormal
+heatingdegreedays
+count    30.000000
+mean      3.133333
+std       3.298206
+min       0.000000
+25%       0.000000
+50%       2.000000
+75%       4.750000
+max      10.000000
+Name: heatingdegreedays
+mindewptm
+count    30.000000
+mean      9.066667
+std       6.389287
+min      -6.000000
+25%       3.250000
+50%      11.000000
+75%      13.000000
+max      19.000000
+Name: mindewptm
+since1sepheatingdegreedays
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: since1sepheatingdegreedays
+maxwspdm
+count    30.000000
+mean     20.566667
+std       5.525386
+min      10.000000
+25%      16.000000
+50%      21.000000
+75%      23.000000
+max      34.000000
+Name: maxwspdm
+since1julsnowfalli
+count    30.0
+mean     61.9
+std       NaN
+min      61.9
+25%      61.9
+50%      61.9
+75%      61.9
+max      61.9
+Name: since1julsnowfalli
+since1sepcoolingdegreedays
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: since1sepcoolingdegreedays
+snow
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: snow
+meanvism
+count    30.000000
+mean     11.966667
+std       4.382436
+min       4.000000
+25%       8.250000
+50%      14.000000
+75%      16.000000
+max      16.000000
+Name: meanvism
+meandewptm
+count    30.000000
+mean     11.433333
+std       5.624352
+min      -1.000000
+25%       7.250000
+50%      12.500000
+75%      15.750000
+max      20.000000
+Name: meandewptm
+snowdepthm
+count    29
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: snowdepthm
+meanvisi
+count    30.000000
+mean      7.566667
+std       2.725149
+min       3.000000
+25%       5.000000
+50%       9.000000
+75%      10.000000
+max      10.000000
+Name: meanvisi
+fog
+count    30.000000
+mean      0.166667
+std       0.379049
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       0.000000
+max       1.000000
+Name: fog
+snowdepthi
+count    29
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: snowdepthi
+minvism
+count    30.000000
+mean      8.733333
+std       6.892942
+min       0.000000
+25%       1.250000
+50%      10.500000
+75%      16.000000
+max      16.000000
+Name: minvism
+since1jancoolingdegreedays
+count    30.000000
+mean     23.366667
+std      19.905784
+min      13.000000
+25%      13.000000
+50%      13.000000
+75%      18.000000
+max      86.000000
+Name: since1jancoolingdegreedays
+minvisi
+count    30.000000
+mean      5.466667
+std       4.344901
+min       0.000000
+25%       1.000000
+50%       6.500000
+75%      10.000000
+max      10.000000
+Name: minvisi
+coolingdegreedaysnormal
+count    30.000000
+mean      1.966667
+std       1.033352
+min       1.000000
+25%       1.000000
+50%       2.000000
+75%       3.000000
+max       4.000000
+Name: coolingdegreedaysnormal
+gdegreedays
+count    30.000000
+mean     13.566667
+std       6.714284
+min       4.000000
+25%      10.000000
+50%      12.000000
+75%      15.750000
+max      28.000000
+Name: gdegreedays
+maxwspdi
+count    30.000000
+mean     12.766667
+std       3.410767
+min       6.000000
+25%      10.000000
+50%      13.000000
+75%      14.000000
+max      21.000000
+Name: maxwspdi
+meanwindspdi
+count    30.000000
+mean      5.533333
+std       2.012604
+min       1.000000
+25%       5.000000
+50%       5.000000
+75%       6.000000
+max      12.000000
+Name: meanwindspdi
+meanpressurei
+count    30.000000
+mean     29.964667
+std       0.132606
+min      29.640000
+25%      29.912500
+50%      29.960000
+75%      30.045000
+max      30.270000
+Name: meanpressurei
+monthtodateheatingdegreedaysnormal
+count     30.000000
+mean      79.700000
+std       35.338901
+min        8.000000
+25%       54.250000
+50%       87.000000
+75%      110.250000
+max      125.000000
+Name: monthtodateheatingdegreedaysnormal
+meanwindspdm
+count    30.000000
+mean      8.866667
+std       3.048271
+min       2.000000
+25%       8.000000
+50%       9.000000
+75%       9.750000
+max      19.000000
+Name: meanwindspdm
+meanpressurem
+count      30.000000
+mean     1014.500000
+std         4.516254
+min      1004.000000
+25%      1013.000000
+50%      1014.000000
+75%      1017.000000
+max      1025.000000
+Name: meanpressurem
+tornado
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: tornado
+mindewpti
+count    30.000000
+mean     48.300000
+std      11.495576
+min      22.000000
+25%      38.250000
+50%      51.500000
+75%      55.000000
+max      66.000000
+Name: mindewpti
+mintempi
+count    30.000000
+mean     56.200000
+std       6.450875
+min      46.000000
+25%      52.000000
+50%      54.500000
+75%      59.500000
+max      70.000000
+Name: mintempi
+meandewpti
+count    30.000000
+mean     52.733333
+std      10.109515
+min      31.000000
+25%      45.500000
+50%      54.500000
+75%      59.750000
+max      68.000000
+Name: meandewpti
+rain
+count    30.000000
+mean      0.333333
+std       0.479463
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       1.000000
+max       1.000000
+Name: rain
+mintempm
+count    30.000000
+mean     13.433333
+std       3.500575
+min       8.000000
+25%      11.000000
+50%      12.500000
+75%      15.500000
+max      21.000000
+Name: mintempm
+minhumidity
+count    30.000000
+mean     56.100000
+std      21.367636
+min      20.000000
+25%      38.500000
+50%      56.500000
+75%      67.750000
+max      93.000000
+Name: minhumidity
+precipsource
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: precipsource
+minwspdi
+count    30.000000
+mean      0.533333
+std       1.736690
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       0.000000
+max       8.000000
+Name: minwspdi
+meanwdird
+count     30.000000
+mean     156.466667
+std       90.480988
+min       17.000000
+25%       84.500000
+50%      143.000000
+75%      231.000000
+max      324.000000
+Name: meanwdird
+meanwdire
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: meanwdire
+minwspdm
+count    30.000000
+mean      0.833333
+std       2.755350
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       0.000000
+max      13.000000
+Name: minwspdm
+monthtodatesnowfalli
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: monthtodatesnowfalli
+monthtodatecoolingdegreedaysnormal
+count    30.000000
+mean     22.300000
+std      17.186904
+min       1.000000
+25%       8.250000
+50%      18.000000
+75%      34.250000
+max      59.000000
+Name: monthtodatecoolingdegreedaysnormal
+monthtodatesnowfallm
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: monthtodatesnowfallm
+maxhumidity
+count     30.000000
+mean      87.733333
+std       11.476913
+min       60.000000
+25%       78.500000
+50%       90.000000
+75%      100.000000
+max      100.000000
+Name: maxhumidity
+coolingdegreedays
+count    30.000000
+mean      2.433333
+std       4.248191
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       2.750000
+max      13.000000
+Name: coolingdegreedays
+maxtempm
+count    30.000000
+mean     22.133333
+std       4.344901
+min      14.000000
+25%      18.250000
+50%      22.000000
+75%      25.500000
+max      30.000000
+Name: maxtempm
+minpressurei
+count    30.000000
+mean     29.892333
+std       0.148897
+min      29.540000
+25%      29.842500
+50%      29.905000
+75%      29.965000
+max      30.230000
+Name: minpressurei
+monthtodatecoolingdegreedays
+count    30.000000
+mean     10.366667
+std      19.905784
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       5.000000
+max      73.000000
+Name: monthtodatecoolingdegreedays
+maxtempi
+count    30.000000
+mean     71.800000
+std       7.765529
+min      58.000000
+25%      65.500000
+50%      71.500000
+75%      77.250000
+max      86.000000
+Name: maxtempi
+minpressurem
+count      30.000000
+mean     1012.133333
+std         5.083668
+min      1000.000000
+25%      1010.250000
+50%      1012.500000
+75%      1014.750000
+max      1024.000000
+Name: minpressurem
+humidity
+count     0
+mean    NaN
+std     NaN
+min     NaN
+25%     NaN
+50%     NaN
+75%     NaN
+max     NaN
+Name: humidity
+precipi
+count    30.000000
+mean      0.172667
+std       0.437051
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       0.092500
+max       2.180000
+Name: precipi
+snowfalli
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: snowfalli
+since1jancoolingdegreedaysnormal
+count    30.000000
+mean     34.300000
+std      17.186904
+min      13.000000
+25%      20.250000
+50%      30.000000
+75%      46.250000
+max      71.000000
+Name: since1jancoolingdegreedaysnormal
+precipm
+count    30.000000
+mean      4.329000
+std      11.119453
+min       0.000000
+25%       0.000000
+50%       0.000000
+75%       2.350000
+max      55.370000
+Name: precipm
+snowfallm
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: snowfallm
+thunder
+count    30
+mean      0
+std       0
+min       0
+25%       0
+50%       0
+75%       0
+max       0
+Name: thunder
+monthtodateheatingdegreedays
+count    30.000000
+mean     61.100000
+std      28.807746
+min       5.000000
+25%      39.500000
+50%      60.500000
+75%      93.000000
+max      94.000000
+Name: monthtodateheatingdegreedays
+meantempi
+count    30.000000
+mean     64.300000
+std       6.685806
+min      55.000000
+25%      60.250000
+50%      63.000000
+75%      67.750000
+max      78.000000
+Name: meantempi
+maxvism
+count    30.000000
+mean     15.733333
+std       1.142693
+min      10.000000
+25%      16.000000
+50%      16.000000
+75%      16.000000
+max      16.000000
+Name: maxvism
+meantempm
+count    30.000000
+mean     17.900000
+std       3.744882
+min      13.000000
+25%      16.000000
+50%      17.000000
+75%      19.750000
+max      26.000000
+Name: meantempm
