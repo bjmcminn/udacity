@@ -27,7 +27,26 @@ def mann_whitney_plus_means(turnstile_weather):
     You can look at the final turnstile weather data at the link below:
     https://www.dropbox.com/s/meyki2wl9xfa7yk/turnstile_data_master_with_weather.csv
     '''
+    with_rain_mean = 0
+    without_rain_mean = 0
+    U = 0
+    p = 0
+
+    norain = turnstile_weather[turnstile_weather['rain']==0]
+    without_rain_mean = norain['ENTRIESn_hourly'].mean()
+
+    yesrain = turnstile_weather[turnstile_weather['rain']==1]
+    with_rain_mean = yesrain['ENTRIESn_hourly'].mean()
+
+    U,p = scipy.stats.mannwhitneyu(norain['ENTRIESn_hourly'], yesrain['ENTRIESn_hourly'])
+
+    print with_rain_mean
+    print without_rain_mean
+    print U
+    print p
     
+
+    #print turnstile_weather.ix[1:50,1:12]
     
     return with_rain_mean, without_rain_mean, U, p
 
