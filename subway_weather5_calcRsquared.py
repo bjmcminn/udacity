@@ -113,10 +113,45 @@ def plot_residuals(turnstile_weather, predictions):
     plt.show()
     return plt
 
+def compute_r_squared(data, predictions):
+    '''
+    In exercise 5, we calculated the R^2 value for you. But why don't you try and
+    and calculate the R^2 value yourself.
+    
+    Given a list of original data points, and also a list of predicted data points,
+    write a function that will compute and return the coefficient of determination (R^2)
+    for this data.  numpy.mean() and numpy.sum() might both be useful here, but
+    not necessary.
+
+    Documentation about numpy.mean() and numpy.sum() below:
+    http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html
+    http://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html
+    '''
+
+    r_squared = 0
+    
+    theMeanEntries = numpy.mean(data)
+    #print "the mean is: " + str(theMeanEntries) 
+
+    # this is the actual values (the 'y's) minus the mean for all the dependent values (again, the 'y's) then squared
+    denominator_df = numpy.square(data - theMeanEntries)
+    
+    # this is the actual values (the 'y's) minus the predicted values for 'y'...in other words, the residuals...then squared
+    numerator_df = numpy.square(data - predictions)
+
+    r_squared = 1 - (numerator_df.sum() / denominator_df.sum())
+    
+    #print "r squared = " + str(r_squared)
+    
+    return r_squared
+
 
 if __name__ == "__main__":
 
     filename = "combined_weather_mta_raw_data/turnstile_data_master_with_weather.csv"
     weatherdata = pandas.read_csv(filename)
     thePredictions = predictions(weatherdata)
-    plot_residuals(weatherdata,thePredictions)
+    #plot_residuals(weatherdata,thePredictions)
+    
+    data = weatherdata['ENTRIESn_hourly']
+    compute_r_squared(data, thePredictions)
