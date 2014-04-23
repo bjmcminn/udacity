@@ -31,6 +31,12 @@ def plot_weather_data(turnstile_weather):
     of the actual data in the turnstile_weather dataframe
     '''
 
+    #debug code that does the groupby using panadas function rather than SQL, this works too
+    #NOTE: for the udacity submission, could not use pandasql and so submission uses this groupby function rather than sql
+    #testdf = turnstile_weather.groupby('DATEn',as_index=False).sum()
+    #print testdf
+
+    # Query to group the entries volume data by Date
     q = """
     SELECT
         DATEn,
@@ -41,14 +47,38 @@ def plot_weather_data(turnstile_weather):
         DATEn
     """
 
-    #Execute your SQL command against the pandas frame
+    #Execute SQL command against the pandas frame
     grouped_by_day = pandasql.sqldf(q, locals())
-    #print grouped_by_day #before changing datetime
+
+    #Convert the DATEn column to a datetime value (otherwise, it seems ggplot treats it as a string and can't plot it)
     grouped_by_day.DATEn = pandas.to_datetime(grouped_by_day.DATEn)
-    #print grouped_by_day #after changing datetime
+
+    #Sort the data by the DATEn column for plotting purposes
     grouped_by_day = grouped_by_day.sort('DATEn')
-    plot = ggplot(grouped_by_day, aes('DATEn','sumentries')) + geom_point(color = 'red') + geom_line(color='red') + ggtitle('Weather Data') + xlab('Date') + ylab('Entries')
+
+    #Get the day of week string values for each date in DATEn
+    theDayNames = []
+    for the_date_time in grouped_by_day['DATEn']:
+        theDayNames.append(datetime.strftime(the_date_time,'%a'))
+    grouped_by_day['DayName'] = theDayNames
+
+    #Convert the datetimes to just dates in the DATEn column.  I'm nor sure why, but if they are DateTimes, ggplot tries to rescale the horizontal
+    #axis and it does so somewhat arbitrarily
+    grouped_by_day.DATEn = [d.date() for d in grouped_by_day.DATEn]
+
+    #Print for debugging purposes
+    print grouped_by_day
+
+    #Plot the resulting dataframe: show a line graph that shows ridership by date
+    #plot = ggplot(grouped_by_day, aes('DATEn','sumentries')) + geom_point(color = 'red') + geom_line(color='red') + ggtitle('NY MTA Ridership Data') + xlab('Date') + ylab('Turnstile Entries')
     
+    #Plot the resulting dataframe: show a bar graph that shows ridership by date
+    plot = ggplot(grouped_by_day, aes(x='DATEn',y='sumentries')) \
+        + geom_bar(aes(weight = 'sumentries'), fill='blue') \
+        + ggtitle('NY MTA Ridership Data') + xlab('Date') + ylab('Turnstile Entries') \
+        #+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+    
+
     return plot
 
 if __name__ == "__main__":
