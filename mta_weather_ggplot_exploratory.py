@@ -58,9 +58,12 @@ def plot_weather_data(turnstile_weather):
 
     #Get the day of week string values for each date in DATEn
     theDayNames = []
+    theDateDOW = []
     for the_date_time in grouped_by_day['DATEn']:
         theDayNames.append(datetime.strftime(the_date_time,'%a'))
+        theDateDOW.append(datetime.strftime(the_date_time, '%m-%d-%y') + "-" + datetime.strftime(the_date_time, '%a'))
     grouped_by_day['DayName'] = theDayNames
+    grouped_by_day['DateDOW'] = theDateDOW
 
     #Convert the datetimes to just dates in the DATEn column.  I'm nor sure why, but if they are DateTimes, ggplot tries to rescale the horizontal
     #axis and it does so somewhat arbitrarily
@@ -76,7 +79,7 @@ def plot_weather_data(turnstile_weather):
     plot = ggplot(grouped_by_day, aes(x='DATEn',y='sumentries')) \
         + geom_bar(aes(weight = 'sumentries'), fill='blue') \
         + ggtitle('NY MTA Ridership Data') + xlab('Date') + ylab('Turnstile Entries') \
-        #+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+        #+ theme(axis_text_x = element_text(angle = 90, vjust = 0.5, hjust=1))
     
 
     return plot
